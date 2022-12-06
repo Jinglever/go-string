@@ -1,8 +1,9 @@
-package jgstr
+package jgstr_test
 
 import (
 	"testing"
 
+	jgstr "github.com/Jinglever/go-string"
 	"github.com/bmizerany/assert"
 )
 
@@ -12,7 +13,7 @@ func TestFormatGo(t *testing.T) {
 	func demo() {
 	fmt.Println("hello world")
 	}`)
-	dst, err := FormatGo(src)
+	dst, err := jgstr.FormatGo(src)
 	if err != nil {
 		t.Fatal(err)
 	}
