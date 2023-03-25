@@ -25,3 +25,19 @@ func FloatVal(s string) float64 {
 	}
 	return n
 }
+
+func IntVal(s string) int64 {
+	n, err := strconv.ParseInt(s, 10, 64) //nolint
+	if err != nil {
+		n = 0
+	}
+	return n
+}
+
+func UintVal(s string) uint64 {
+	n, err := strconv.ParseUint(s, 10, 64) //nolint
+	if err != nil {
+		n = 0
+	}
+	return n
+}
